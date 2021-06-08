@@ -2,9 +2,26 @@
     font-family: 'genshin';
     src:url('genshin.ttf')
     format('truetype');
+}
 
+body {
+    /* Placeholder bg, we can change it to anything we decide later */
+    background: url('https://i.redd.it/66ic9c791ih61.png') fixed center no-repeat;
+    height: 100vh;
+    background-size: cover;
 }
 
 h1 {
     font-family:'genshin'!important;
+    color: white;
+    font-size: 35px;
+    padding: 20px;
+}
+
+.bg-image {
+    background: url('frame.png') fixed center no-repeat;
+    height: 100vh;
+    background-size: contain;
+    -webkit-filter: drop-shadow(5px 5px 5px #222 );
+    filter: drop-shadow(2px 2px 2px #222);
 }
