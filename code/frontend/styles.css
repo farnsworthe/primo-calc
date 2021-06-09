@@ -21,7 +21,7 @@ h1 {
 .bg-image {
     background: url('frame.png') fixed center no-repeat;
     height: 100vh;
-    background-size: 100vw;
+    background-size: cover;
     -webkit-filter: drop-shadow(5px 5px 5px #222 );
     filter: drop-shadow(2px 2px 2px #222);
 }
