@@ -9,35 +9,74 @@ body {
     background: url('https://i.redd.it/66ic9c791ih61.png') fixed center no-repeat;
     height: 100vh;
     background-size: cover;
+    font-family:'genshin'!important;
+    color: black;
 }
 
 h1 {
-    font-family:'genshin'!important;
     color: white;
-    font-size: 35px;
-    padding: 20px;
+    font-size: 15px;
+    padding-top: 10%;
 }
 
-.bg-image {
-    background: url('frame.png') fixed center no-repeat;
-    height: 100vh;
-    background-size: cover;
+img {
+    width:100%;
+}
+
+.frame {
     -webkit-filter: drop-shadow(5px 5px 5px #222 );
     filter: drop-shadow(2px 2px 2px #222);
 }
 
 .container-fluid {
-    background-color: cornflowerblue;
-    opacity:50%;
-    position:fixed;
     height:100vh;
-    padding-top: 10vh;
 }
 
-.row {
-    background-color:crimson;
-    max-width:1600px;
-    height:75vh;
-    margin:auto;
-    /*margin-top:100px;*/
+.row {  /* The outermost row */
+    background-color: brown;
+    opacity: 50%;
+    margin: auto;
+}
+
+.col-sm {   /* The col with the tabs */
+    background-color: cyan;
+    opacity: 50%;
+    position: absolute;
+    margin: 10% 10% auto;
+    max-width: 9%;
+    max-height: 100vh;
+    text-align: center;
+}
+
+.col-md {   /* The col with the calc button */
+    background-color: rgb(7, 180, 180);
+    opacity: 50%;
+    position: absolute;
+    margin: 13% 20% auto;
+    max-width: 17%;
+    text-align: center;
+}
+
+.col-lg {   /* The col with the parameters */
+    background-color: rgb(3, 128, 128);
+    opacity: 50%;
+    position: absolute;
+    margin: 13% 38% auto;
+    max-width: 45%;
+}
+
+.tabs {
+    background-color: rgb(212, 164, 252);
+    margin: 1% auto 10% auto;
+    padding: 15%;
+}
+
+.tabs:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.parameters {
+    background-color: rgb(212, 164, 252);
+    margin: auto auto 1% auto;
+    padding: 5%;
 }
