@@ -10,12 +10,13 @@ body {
     height: 100vh;
     background-size: cover;
     font-family:'genshin'!important;
+    font-size: 1vw;
     color: black;
 }
 
 h1 {
     color: white;
-    font-size: 15px;
+    font-size: 1vw;
     padding-top: 10%;
 }
 
@@ -33,50 +34,52 @@ img {
 }
 
 .row {  /* The outermost row */
-    background-color: brown;
-    opacity: 50%;
+    /*background-color: brown;
+    opacity: 50%;*/
     margin: auto;
 }
 
 .col-sm {   /* The col with the tabs */
-    background-color: cyan;
-    opacity: 50%;
+    /*background-color: cyan;
+    opacity: 50%;*/
     position: absolute;
-    margin: 10% 10% auto;
-    max-width: 9%;
-    max-height: 100vh;
+    margin: 10vw 10vw auto;
+    max-width: 9vw;
     text-align: center;
 }
 
 .col-md {   /* The col with the calc button */
     background-color: rgb(7, 180, 180);
-    opacity: 50%;
+    /*opacity: 50%;*/
     position: absolute;
-    margin: 13% 20% auto;
-    max-width: 17%;
+    margin: 12.5vw 20vw auto;
+    max-width: 17vw;
     text-align: center;
 }
 
 .col-lg {   /* The col with the parameters */
-    background-color: rgb(3, 128, 128);
-    opacity: 50%;
+    /*background-color: rgb(3, 128, 128);
+    opacity: 50%;*/
     position: absolute;
-    margin: 13% 38% auto;
-    max-width: 45%;
+    margin: 12.5vw auto auto 38vw;
+    max-width: 44.5vw;
+    padding: 0vw;
 }
 
 .tabs {
-    background-color: rgb(212, 164, 252);
-    margin: 1% auto 10% auto;
-    padding: 15%;
+    /*background-color: rgb(212, 164, 252);*/
+    border: 1px solid black;
+    margin: auto auto .8vw auto;
+    padding: 1.5vw;
 }
 
 .tabs:hover {
-    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .parameters {
     background-color: rgb(212, 164, 252);
-    margin: auto auto 1% auto;
-    padding: 5%;
+    margin: auto auto .5vw auto;
+    max-width: 43vw;
+    padding: 5.3%;
 }
