@@ -83,3 +83,12 @@ img {
     max-width: 43vw;
     padding: 5.3%;
 }
+
+form{
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+input{
+    border-radius: 10px;
+}
