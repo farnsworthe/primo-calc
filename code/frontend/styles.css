@@ -12,7 +12,6 @@ body {
     font-family:'genshin'!important;
     font-size: 1vw;
     color: black;
-    overflow: hidden;
 }
 
 h1 {
@@ -36,7 +35,7 @@ img {
 
 .row {  /* The outermost row */
     /*background-color: brown;
-    opacity: 100%;*/
+    opacity: 50%;*/
     margin: auto;
 }
 
@@ -83,13 +82,4 @@ img {
     margin: auto auto .5vw auto;
     max-width: 43vw;
     padding: 5.3%;
-}
-
-form{
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
-
-input{
-    border-radius: 10px;
 }
