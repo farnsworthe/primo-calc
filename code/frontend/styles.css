@@ -39,7 +39,8 @@ img {
 }
 
 .container-fluid {
-    height:100vh;
+    height: 100vh;
+    padding: 0vw;
 }
 
 .row {  /* The outermost row */
@@ -70,7 +71,6 @@ img {
     position: absolute;
     margin: 13.2vw auto auto 38vw;
     max-width: 44.5vw;
-    padding: 0vw;
 }
 
 .tabs {
