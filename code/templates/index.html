@@ -9,7 +9,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="static/styles.css">-->
     <link rel="stylesheet" type="text/css" href="static/styles.css">
 
     <title>Primogem Calculator</title>
@@ -39,13 +38,17 @@
           <br>
           <form action="/date_range.php">
             <label for="start">Start Date:</label>
-            <input type="date" id="start" name="start">
+            <input type="date" id="start" name="start" onchange="cal()">
             <br><br>
             <label for="end">End Date:</label>
-            <input type="date" id="end" name="end">
+            <input type="date" id="end" name="end" onchange="cal()">
           </form>
         <div class="deco">
-          <div class ="days">69</div>
+          <div class ="days">
+
+            <input id="numdays2" name="numdays"/>
+
+          </div>
         </div>
           <button class="calc" type="submit">ESTIMATE</button>
           <button class="calc" type="submit">CALCULATE</button>
@@ -56,7 +59,7 @@
         <div class="col-lg">
           <div class="parameters"> 
           <h2 id= "param">➤ ABYSS RESET</h2>
-          How many average stars do you have per reset?<br> <input type="number">
+          How many average stars do you have per reset? <input type="number">
           </div>
           <div class="parameters"> 
             <h2 id= "param">➤ EVENTS</h2>
@@ -65,7 +68,7 @@
           <div class="parameters"> <h2 id= "param">➤ MISC FREE PRIMOGEMS</h2>
            Maintenance and livestream primos? <input type="checkbox"> Dailies? <input type="checkbox"> Test runs? <input type="checkbox"></div>
           <div class="parameters"> <h2 id ="param">➤ PAID PRIMOGEMS</h2>
-            Welkin? <input type="checkbox"> BP? <input type="checkbox"> Genesis crystals? <input type="number">
+            Welkin? <input type="checkbox"> Battle Pass? <input type="checkbox"> Genesis crystals? <input type="number">
            </div>
         </div>
         <!-- Parameters Col End -->
@@ -77,6 +80,7 @@
     <!-- Container End-->
 
     <!-- Optional JavaScript -->
+    <script src="static/js.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

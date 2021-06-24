@@ -29,7 +29,7 @@ h2 {
 }
 
 #param {
-    padding: 0px;
+    padding-bottom: .6vw;
 }
 
 .calc {     /* estimate and calculate buttons */
@@ -58,6 +58,13 @@ img {
 .days {     /* days displayed from start/end date selection */
     margin: 5vw auto;
     font-size: 1.6vw;
+}
+
+#numdays2 {     /* days displayed from start/end date selection */
+    background-color: transparent;
+    border: 0px;
+    text-align: center;
+    width: 5vw;
 }
 
 .deco {     /* the circle image thing */
@@ -120,9 +127,9 @@ img {
 .parameters {
     /*background-color: #EBE2D8;*/
     background-image: linear-gradient(to right, rgba(255, 153, 0, 0.048), #EBE2D8 50%);
-    border: 2px double #D6CABC;
+    border: 3px solid #D6CABC;
     margin: auto auto .5vw auto;
-    width: 43vw;
+    width: 43.5vw;
     height: 7.6vw;
     padding: 3%;
 }
@@ -135,9 +142,19 @@ input {
     border-color: #D6CABC;
     border-radius: 8px;
     color: #84603D;
+    width: 10vw;
 }
+
+input[type=number] {
+    width: 2.7vw;
+    margin: 0px .5vw;
+  }
 
 input[type=number]:focus {
     transition: background-color .35s ease-in-out;
     background-color:  #D6CABC;
+  }
+
+input[type=checkbox] {
+    width: 1.8vw;
   }
