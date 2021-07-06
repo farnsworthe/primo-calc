@@ -88,15 +88,14 @@ img {
 }
 
 .col-sm {   /* The col with the tabs */
-    /*background-color: rgba(0, 255, 255, 0.295);*/
     position: absolute;
     margin: 10.4vw 10.7vw auto;
     max-width: 9vw;
     text-align: center;
+    color: white;
 }
 
 .col-md {   /* The col with the calc button */
-    /*background-color: rgba(7, 180, 180, 0.096);*/
     position: absolute;
     margin: 12.5vw 20vw auto;
     max-width: 18vw;
@@ -104,28 +103,39 @@ img {
 }
 
 .col-lg {   /* The col with the parameters */
-    /*background-color: rgb(3, 128, 128);
-    opacity: 50%;*/
     position: absolute;
     margin: 13.4vw auto auto 38.4vw;
     max-width: 44.5vw;
 }
 
 .tabs {
-    /*background-color: rgb(212, 164, 252);
-    border: 1px solid black;*/
-    margin: auto auto .8vw auto;
-    padding: 1.5vw;
+    margin: auto auto .6vw auto;
     font-size: 1vw;
 }
 
-.tabs:hover {
-    transition: color .35s linear;
-    color: rgb(255, 255, 255);
+#tabs1 {    /* Input tab */
+    padding: 1.5vw;
+}
+
+#tabs2 {    /* Results tab */
+    padding: 1.5vw;
+}
+
+.tabContent {
+    display: none;
+}
+
+#intro {    /* Disclaimer & Intructions */
+    background-image: linear-gradient(to right, rgba(255, 153, 0, 0.048), #EBE2D8 50%);
+    border: 3px solid #D6CABC;
+    margin: auto auto .5vw auto;
+    width: 43.5vw;
+    height: auto;
+    padding: 3%;
+    line-height: 1.5vw;;
 }
 
 .parameters {
-    /*background-color: #EBE2D8;*/
     background-image: linear-gradient(to right, rgba(255, 153, 0, 0.048), #EBE2D8 50%);
     border: 3px solid #D6CABC;
     margin: auto auto .5vw auto;
