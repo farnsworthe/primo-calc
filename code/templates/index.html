@@ -48,25 +48,27 @@
           <div class ="days">69</div>
         </div>
           <button class="calc" type="submit">ESTIMATE</button>
-          <button class="calc" type="submit">CALCULATE</button>
+          <button class="calc" form = "param_form" type="submit">CALCULATE</button>
         </div>
         <!-- Calc Col End -->
 
         <!-- Parameters Col Start -->
         <div class="col-lg">
-          <div class="parameters"> 
-          <h2 id= "param">➤ ABYSS RESET</h2>
-          How many average stars do you have per reset?<br> <input type="number">
-          </div>
-          <div class="parameters"> 
-            <h2 id= "param">➤ EVENTS</h2>
-            Include main events? <input type="checkbox">  How many side events? <input type="number"> How many new quests? <input type="number">
-          </div>
-          <div class="parameters"> <h2 id= "param">➤ MISC FREE PRIMOGEMS</h2>
-           Maintenance and livestream primos? <input type="checkbox"> Dailies? <input type="checkbox"> Test runs? <input type="checkbox"></div>
-          <div class="parameters"> <h2 id ="param">➤ PAID PRIMOGEMS</h2>
-            Welkin? <input type="checkbox"> BP? <input type="checkbox"> Genesis crystals? <input type="number">
-           </div>
+          <form method="POST" id="param_form">
+            <div class="parameters"> 
+            <h2 id= "param">➤ ABYSS RESET</h2>
+            How many average stars do you have per reset?<br> <input type="number" name="abyss">
+            </div>
+            <div class="parameters"> 
+              <h2 id= "param">➤ EVENTS</h2>
+              Include main events? <input type="checkbox" name="main_event">  How many side events? <input type="number" name="side_event"> How many new quests? <input type="number" name="new_quests">
+            </div>
+            <div class="parameters"> <h2 id= "param">➤ MISC FREE PRIMOGEMS</h2>
+            Maintenance and livestream primos? <input type="checkbox" name="maint_live"> Dailies? <input type="checkbox" name="dailies"> Test runs? <input type="checkbox" name="test_runs"></div>
+            <div class="parameters"> <h2 id ="param">➤ PAID PRIMOGEMS</h2>
+              Welkin? <input type="checkbox" name="welkin"> BP? <input type="checkbox" name="bp"> Genesis crystals? <input type="number" name="paid">
+            </div>
+          </form>
         </div>
         <!-- Parameters Col End -->
 
