@@ -4,6 +4,10 @@ from flask import render_template, request, redirect
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    return render_template("index.html")
+
+@app.route("/", methods=["GET", "POST"])
+def data():
     if request.method == "POST":
 
         req = request.form
