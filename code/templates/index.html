@@ -9,7 +9,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="static/styles.css">-->
     <link rel="stylesheet" type="text/css" href="static/styles.css">
 
     <title>Primogem Calculator</title>
@@ -28,8 +27,18 @@
 
         <!-- Tabs Col Start -->
         <div class="col-sm">
-          <div class="tabs"> INPUT </div>
-          <div class="tabs"> RESULTS </div>
+
+          <div class="tabs">    <!-- Input Tab -->
+            <div id="tabs1" onclick="displayTab(this); hideIntro();">
+            INPUT
+            </div>
+          </div>
+          <div class="tabs">    <!-- Results Tab -->
+            <div id="tabs2" onclick="displayTab(this); hideIntro();">
+            RESULTS
+            </div>
+          </div>
+
         </div>
         <!-- Tabs Col End -->
 
@@ -39,36 +48,91 @@
           <br>
           <form action="/date_range.php">
             <label for="start">Start Date:</label>
-            <input type="date" id="start" name="start">
+            <input type="date" id="start" name="start" onchange="cal()">
             <br><br>
             <label for="end">End Date:</label>
-            <input type="date" id="end" name="end">
+            <input type="date" id="end" name="end" onchange="cal()">
           </form>
-        <div class="deco">
-          <div class ="days">69</div>
+        <div class="deco">  <!-- The circle w/ the date range -->
+          <div class ="days">
+            <input id="numdays2" name="numdays"/>   <!-- The date range -->
+          </div>
         </div>
           <button class="calc" type="submit">ESTIMATE</button>
-          <button class="calc" form = "param_form" type="submit">CALCULATE</button>
+          <button class="calc" type="submit" form="param_form">CALCULATE</button>
         </div>
         <!-- Calc Col End -->
 
-        <!-- Parameters Col Start -->
+        <!-- Parameters & Results Col Start -->
         <div class="col-lg">
-          <form method="POST" id="param_form">
+
+          <!-- Disclaimer Start -->
+          <div id="intro"> 
+            <h2 id= "param">➤ Disclaimer & Intructions </h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <!-- Disclaimer End -->
+
+          <!-- Parameters Input Start -->
+          <div id="tabs-1" class="tabContent">
+
+            <form method="POST" id="param_form">
+
+              <div class="parameters"> 
+              <h2 id="param">➤ ABYSS RESET</h2>
+              How many average stars do you have per reset? <input type="number" name="abyss">
+              </div>
+
+              <div class="parameters"> 
+                <h2 id= "param">➤ EVENTS</h2>
+                Include main events? <input type="checkbox" name="main_event">
+                How many side events? <input type="number" name="side_event">
+                How many new quests? <input type="number" name="new_quests">
+              </div>
+
+              <div class="parameters"> <h2 id= "param">➤ MISC FREE PRIMOGEMS</h2>
+              Maintenance and livestream primos? <input type="checkbox" name="maint_live">
+              Dailies? <input type="checkbox" name="dailies">
+              Test runs? <input type="checkbox" name="test_runs">
+              </div>
+
+              <div class="parameters"> <h2 id ="param">➤ PAID PRIMOGEMS</h2>
+              Welkin? <input type="checkbox" name="welkin">
+              Battle Pass? <input type="checkbox" name="bp">
+              Genesis crystals? <input type="number" name="paid">
+              </div>
+
+            </form>
+
+          </div>
+          <!-- Parameters Input End-->
+
+          <!-- Results Output Start -->
+          <div id="tabs-2" class="tabContent">
+
             <div class="parameters"> 
-            <h2 id= "param">➤ ABYSS RESET</h2>
-            How many average stars do you have per reset?<br> <input type="number" name="abyss">
+              <h2 id= "param">➤ RESULTS </h2>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
+
             <div class="parameters"> 
-              <h2 id= "param">➤ EVENTS</h2>
-              Include main events? <input type="checkbox" name="main_event">  How many side events? <input type="number" name="side_event"> How many new quests? <input type="number" name="new_quests">
+              <h2 id= "param">➤ RESULTS </h2>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..
             </div>
-            <div class="parameters"> <h2 id= "param">➤ MISC FREE PRIMOGEMS</h2>
-            Maintenance and livestream primos? <input type="checkbox" name="maint_live"> Dailies? <input type="checkbox" name="dailies"> Test runs? <input type="checkbox" name="test_runs"></div>
-            <div class="parameters"> <h2 id ="param">➤ PAID PRIMOGEMS</h2>
-              Welkin? <input type="checkbox" name="welkin"> BP? <input type="checkbox" name="bp"> Genesis crystals? <input type="number" name="paid">
+
+            <div class="parameters"> 
+              <h2 id= "param">➤ RESULTS </h2>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
-          </form>
+
+            <div class="parameters"> 
+              <h2 id= "param">➤ RESULTS </h2>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+
+          </div>
+          <!-- Results Output End -->
+
         </div>
         <!-- Parameters Col End -->
 
@@ -79,6 +143,7 @@
     <!-- Container End-->
 
     <!-- Optional JavaScript -->
+    <script src="static/js.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
