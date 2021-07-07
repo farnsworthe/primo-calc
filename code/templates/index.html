@@ -28,20 +28,15 @@
         <!-- Tabs Col Start -->
         <div class="col-sm">
 
-          <div class="tabs"> 
-
+          <div class="tabs">    <!-- Input Tab -->
             <div id="tabs1" onclick="displayTab(this); hideIntro();">
             INPUT
             </div>
-
           </div>
-
-          <div class="tabs">
-
+          <div class="tabs">    <!-- Results Tab -->
             <div id="tabs2" onclick="displayTab(this); hideIntro();">
             RESULTS
             </div>
-
           </div>
 
         </div>
@@ -58,50 +53,56 @@
             <label for="end">End Date:</label>
             <input type="date" id="end" name="end" onchange="cal()">
           </form>
-        <div class="deco">
+        <div class="deco">  <!-- The circle w/ the date range -->
           <div class ="days">
-
-            <input id="numdays2" name="numdays"/>
-
+            <input id="numdays2" name="numdays"/>   <!-- The date range -->
           </div>
         </div>
           <button class="calc" type="submit">ESTIMATE</button>
-          <button class="calc" type="submit">CALCULATE</button>
+          <button class="calc" type="submit" form="param_form">CALCULATE</button>
         </div>
         <!-- Calc Col End -->
 
         <!-- Parameters & Results Col Start -->
         <div class="col-lg">
 
-          <!-- Intructions Start -->
-
+          <!-- Disclaimer Start -->
           <div id="intro"> 
             <h2 id= "param">➤ Disclaimer & Intructions </h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
-
-          <!-- Intructions End -->
+          <!-- Disclaimer End -->
 
           <!-- Parameters Input Start -->
           <div id="tabs-1" class="tabContent">
 
-            <div class="parameters"> 
-            <h2 id= "param">➤ ABYSS RESET</h2>
-            How many average stars do you have per reset? <input type="number">
-            </div>
+            <form method="POST" id="param_form">
 
-            <div class="parameters"> 
-              <h2 id= "param">➤ EVENTS</h2>
-              Include main events? <input type="checkbox">  How many side events? <input type="number"> How many new quests? <input type="number">
-            </div>
+              <div class="parameters"> 
+              <h2 id="param">➤ ABYSS RESET</h2>
+              How many average stars do you have per reset? <input type="number" name="abyss">
+              </div>
 
-            <div class="parameters"> <h2 id= "param">➤ MISC FREE PRIMOGEMS</h2>
-              Maintenance and livestream primos? <input type="checkbox"> Dailies? <input type="checkbox"> Test runs? <input type="checkbox">
-            </div>
+              <div class="parameters"> 
+                <h2 id= "param">➤ EVENTS</h2>
+                Include main events? <input type="checkbox" name="main_event">
+                How many side events? <input type="number" name="side_event">
+                How many new quests? <input type="number" name="new_quests">
+              </div>
 
-            <div class="parameters"> <h2 id ="param">➤ PAID PRIMOGEMS</h2>
-              Welkin? <input type="checkbox"> Battle Pass? <input type="checkbox"> Genesis crystals? <input type="number">
-            </div>
+              <div class="parameters"> <h2 id= "param">➤ MISC FREE PRIMOGEMS</h2>
+              Maintenance and livestream primos? <input type="checkbox" name="maint_live">
+              Dailies? <input type="checkbox" name="dailies">
+              Test runs? <input type="checkbox" name="test_runs">
+              </div>
+
+              <div class="parameters"> <h2 id ="param">➤ PAID PRIMOGEMS</h2>
+              Welkin? <input type="checkbox" name="welkin">
+              Battle Pass? <input type="checkbox" name="bp">
+              Genesis crystals? <input type="number" name="paid">
+              </div>
+
+            </form>
 
           </div>
           <!-- Parameters Input End-->
