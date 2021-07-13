@@ -6,12 +6,16 @@ from flask import render_template, request, redirect
 def index():
     return render_template("index.html")
 
+@app.route("/results", methods=["GET", "POST"])
+def results():
+    return render_template("results.html")
+
 @app.route("/", methods=["GET", "POST"])
 def data():
     if request.method == "POST":
 
-        req = request.form
-        print(req)
+        abyss = request.form.get("abyss")
+        print(abyss)
         return redirect(request.url)
 
     return render_template("index.html")
