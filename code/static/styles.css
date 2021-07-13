@@ -107,21 +107,39 @@ img {
 }
 
 .tabs {
-    margin: auto auto .6vw auto;
+    margin: auto auto .8vw auto;
     font-size: 1vw;
 }
 
-#tabs1 {    /* Input tab */
+.tabs a:hover {
+    text-decoration: none;
+}
+
+#tabs1 {    /* Input tab on input page */
+    color: #84603D;
     padding: 1.5vw;
 }
 
-#tabs2 {    /* Results tab */
+#tabs2 {    /* Results tab on input page */
+    color: white;
     padding: 1.5vw;
 }
 
+#tabs1v2 {  /* Input tab on results page*/
+    color: white;
+    padding: 1.5vw;
+}
+
+#tabs2v2 {  /* Results tab on results page */
+    color: #84603D;
+    padding: 1.5vw;
+}
+
+/*
 .tabContent {
     display: none;
 }
+*/
 
 #intro {    /* Disclaimer & Intructions */
     background-image: linear-gradient(to right, rgba(255, 153, 0, 0.048), #EBE2D8 50%);

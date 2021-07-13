@@ -29,14 +29,18 @@
         <div class="col-sm">
 
           <div class="tabs">    <!-- Input Tab -->
-            <div id="tabs1" onclick="displayTab(this); hideIntro();">
-              <a href="/">INPUT</a>
-            </div>
+            <a href="/">
+              <div id="tabs1">
+                INPUT
+              </div>
+            </a>
           </div>
           <div class="tabs">    <!-- Results Tab -->
-            <div id="tabs2" onclick="displayTab(this); hideIntro();">
-            <a href="/results">RESULTS</a>
-            </div>
+            <a href="/results">
+              <div id="tabs2">
+              RESULTS
+              </div>
+          </a>
           </div>
 
         </div>
@@ -67,14 +71,16 @@
         <div class="col-lg">
 
           <!-- Disclaimer Start -->
+          <!--
           <div id="intro"> 
             <h2 id= "param">➤ Disclaimer & Intructions </h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
+        -->
           <!-- Disclaimer End -->
 
           <!-- Parameters Input Start -->
-          <div id="tabs-1" class="tabContent">
+          <div id="tabs-1">
 
             <form method="POST" id="param_form">
 
@@ -108,11 +114,10 @@
           <!-- Parameters Input End-->
 
           <!-- Results Output Start -->
-          
           <!-- Results Output End -->
 
         </div>
-        <!-- Parameters Col End -->
+        <!-- Parameters & Results Col End -->
 
       </div>
       <!-- Outermost Row End -->

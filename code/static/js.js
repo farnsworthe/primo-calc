@@ -17,6 +17,7 @@ function hideIntro() {
     }
 }
 
+/*
 function displayTab(element) {
     var tabContents = document.getElementsByClassName('tabContent');
     for (var i = 0; i < tabContents.length; ++i) {
@@ -25,3 +26,4 @@ function displayTab(element) {
     var tabContentIdToShow = element.id.replace(/(\d)/g, '-$1');
     document.getElementById(tabContentIdToShow).style.display = 'block';
 }
+*/
