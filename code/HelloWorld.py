@@ -8,9 +8,14 @@ def index():
 
 @app.route("/results", methods=["GET", "POST"])
 def results():
+    if request.method == "POST":
+
+        abyss = request.form.get("abyss")
+        print(abyss)
+        #return redirect(request.url)
     return render_template("results.html")
 
-@app.route("/", methods=["GET", "POST"])
+""" @app.route("/", methods=["GET", "POST"])
 def data():
     if request.method == "POST":
 
@@ -18,7 +23,7 @@ def data():
         print(abyss)
         return redirect(request.url)
 
-    return render_template("index.html")
+    return render_template("index.html") """
 
 if __name__ == '__main__':
     app.run(debug=True)
