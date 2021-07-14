@@ -1,3 +1,6 @@
+$.cookie('cookie_name', 'cookie_value', { expires: null, path: '/'});
+/* ^ for the popup */
+
 function GetDays() {
     var enddt = new Date(document.getElementById("end").value);
     var startdt = new Date(document.getElementById("start").value);
