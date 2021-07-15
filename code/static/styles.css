@@ -55,6 +55,26 @@ img {
     z-index:-2;
 }
 
+.primototal {
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.primo {
+    background-image: linear-gradient(to top, #D79844, #B8834B 50%);
+    width: 4.5vw;
+    border-radius: 4px;
+    z-index: -2;
+}
+
+.primoval {
+    background-color: rgba(0, 0, 0, 0.438);
+    width: 4.5vw;
+    position: absolute;
+    margin: -28px 0 0 150px;
+    border-radius: 0 0 4px 4px;
+    color: white;
+}
+
 .days {     /* days displayed from start/end date selection */
     margin: 5vw auto;
     font-size: 1.6vw;
