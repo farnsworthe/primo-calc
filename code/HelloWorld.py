@@ -12,6 +12,8 @@ def results():
 
         abyss = request.form.get("abyss")
         print(abyss)
+        days = request.form.get("numdays")
+        print(days)
         #return redirect(request.url)
     return render_template("results.html")
 

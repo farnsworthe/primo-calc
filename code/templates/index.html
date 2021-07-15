@@ -59,7 +59,10 @@
           </form>
         <div class="deco">  <!-- The circle w/ the date range -->
           <div class ="days">
-            <input id="numdays2" name="numdays"/>   <!-- The date range -->
+            <form action="/results" method="POST" id="param_form">
+              <input id="numdays2" name="numdays"/>   <!-- The date range -->
+              <button class="days_submit" type="submit">OK</button>
+            </form>
           </div>
         </div>
           <button class="calc" type="submit">ESTIMATE</button>
