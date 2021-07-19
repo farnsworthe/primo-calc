@@ -62,14 +62,14 @@ img {
 .primo {
     background-image: linear-gradient(to top, #D79844, #B8834B 50%);
     width: 4.5vw;
+    position: relative;
     border-radius: 4px;
-    z-index: -2;
 }
 
 .primoval {
     background-color: rgba(0, 0, 0, 0.438);
     width: 4.5vw;
-    position: absolute;
+    position: relative;
     margin: -28px 0 0 150px;
     border-radius: 0 0 4px 4px;
     color: white;
@@ -97,6 +97,7 @@ img {
 }
 
 .container-fluid {
+    margin: auto;
     height: 100vh;
     padding: 0vw;
 }
