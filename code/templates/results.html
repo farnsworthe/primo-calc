@@ -20,83 +20,87 @@
     <!-- Container Start -->
     <div class="container-fluid">
 
-      <!-- Outermost Row Start -->
-      <div class="row">
+      <form action="/results" method="POST" id="param_form">
 
-        <img class="frame" src="static/images/frame2.png">
+        <!-- Outermost Row Start -->
+        <div class="row">
 
-        <!-- Tabs Col Start -->
-        <div class="col-sm">
+          <img class="frame" src="static/images/frame2.png">
 
-          <div class="tabs">    <!-- Input Tab -->
-            <a href="/">
-              <div id="tabs1v2">
-                INPUT
-              </div>
+          <!-- Tabs Col Start -->
+          <div class="col-sm">
+
+            <div class="tabs">    <!-- Input Tab -->
+              <a href="/">
+                <div id="tabs1v2">
+                  INPUT
+                </div>
+              </a>
+            </div>
+            <div class="tabs">    <!-- Results Tab -->
+              <a href="/results">
+                <div id="tabs2v2">
+                RESULTS
+                </div>
             </a>
+            </div>
+
           </div>
-          <div class="tabs">    <!-- Results Tab -->
-            <a href="/results">
-              <div id="tabs2v2">
-              RESULTS
+          <!-- Tabs Col End -->
+
+          <!-- Calc Col Start -->
+          <div class="col-md">
+            <h1> PRIMOGEM CALCULATOR </h1>
+            <div class="deco">  <!-- The circle w/ the date range -->
+              <div class ="days">
+                <input id="numdays2" name="numdays"/>   <!-- The date range -->
               </div>
-          </a>
+            </div>
+
+            <div class="primototal">
+              <img class="primo" src="static/images/primogem.png">
+              <div class="primoval">1234</div>
+            </div>
+
           </div>
+          <!-- Calc Col End -->
+
+          <!-- Parameters & Results Col Start -->
+          <div class="col-lg">
+
+            <!-- Results Output Start -->
+            <div id="tabs-2">
+
+              <div class="parameters"> 
+                <h2 id= "param">➤ RESULTS </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+          
+              <div class="parameters"> 
+                <h2 id= "param">➤ RESULTS </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..
+              </div>
+          
+              <div class="parameters"> 
+                <h2 id= "param">➤ RESULTS </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+          
+              <div class="parameters"> 
+                <h2 id= "param">➤ RESULTS </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+          
+            </div>
+            <!-- Results Output End -->
+
+          </div>
+          <!-- Parameters & Results Col End -->
 
         </div>
-        <!-- Tabs Col End -->
+        <!-- Outermost Row End -->
 
-        <!-- Calc Col Start -->
-        <div class="col-md">
-          <h1> PRIMOGEM CALCULATOR </h1>
-          <div class="deco">  <!-- The circle w/ the date range -->
-            <div class ="days">
-              <input id="numdays2" name="numdays"/>   <!-- The date range -->
-            </div>
-          </div>
-
-          <div class="primototal">
-            <img class="primo" src="static/images/primogem.png">
-            <div class="primoval">1234</div>
-          </div>
-
-        </div>
-        <!-- Calc Col End -->
-
-        <!-- Parameters & Results Col Start -->
-        <div class="col-lg">
-
-          <!-- Results Output Start -->
-          <div id="tabs-2">
-
-            <div class="parameters"> 
-              <h2 id= "param">➤ RESULTS </h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        
-            <div class="parameters"> 
-              <h2 id= "param">➤ RESULTS </h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..
-            </div>
-        
-            <div class="parameters"> 
-              <h2 id= "param">➤ RESULTS </h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        
-            <div class="parameters"> 
-              <h2 id= "param">➤ RESULTS </h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        
-          </div>
-          <!-- Results Output End -->
-
-        </div>
-        <!-- Parameters & Results Col End -->
-
-      </div>
-      <!-- Outermost Row End -->
+      </form>
 
     </div>
     <!-- Container End-->
