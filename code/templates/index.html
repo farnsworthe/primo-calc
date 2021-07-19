@@ -50,6 +50,7 @@
 
           <!-- Calc Col Start -->
           <div class="col-md">
+
             <h1> PRIMOGEM CALCULATOR </h1>
             <br>
             <label for="start">Start Date:</label>
@@ -57,35 +58,27 @@
             <br><br>
             <label for="end">End Date:</label>
             <input type="date" id="end" name="end" onchange="cal()">
-          <div class="deco">  <!-- The circle w/ the date range -->
-            <div class ="days">
-              <input id="numdays2" name="numdays"/>   <!-- The date range -->
+
+            <div class="deco">  <!-- The circle w/ the date range -->
+              <div class ="days">
+                  <input id="numdays2" name="numdays"/>   <!-- The date range -->
+              </div>
             </div>
-          </div>
+
             <button class="calc" type="submit">ESTIMATE</button>
             <button class="calc" type="submit" form="param_form">CALCULATE</button>
+
           </div>
-          <!-- Calc Col End -->
-
-          <!-- Parameters & Results Col Start -->
+          
           <div class="col-lg">
-
-            <!-- Disclaimer Start -->
-            <!--
-            <div id="intro"> 
-              <h2 id= "param">➤ Disclaimer & Intructions </h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-            -->
-            <!-- Disclaimer End -->
-
             <!-- Parameters Input Start -->
             <div id="tabs-1">
+
                 <div class="parameters"> 
                   <h2 id="param">➤ ABYSS RESET</h2>
-              How many average stars do you have per floor per reset? <br>Floor 9: <input type="number" id="abyss9" name="abyss9"> 
-              Floor 10: <input type="number" id="abyss10" name="abyss10"> Floor 11: <input type="number" id="abyss11" name="abyss11"> Floor 12: 
-              <input type="number" id="abyss12" name="abyss12">
+                  How many stars do you have per floor per reset on average? <br>Floor 9: <input type="number" id="abyss9" name="abyss9"> 
+                  Floor 10: <input type="number" id="abyss10" name="abyss10"> Floor 11: <input type="number" id="abyss11" name="abyss11"> Floor 12: 
+                  <input type="number" id="abyss12" name="abyss12">
                 </div>
 
                 <div class="parameters"> 
@@ -106,14 +99,10 @@
                   Battle Pass? <input type="checkbox" name="bp" id="bp">
                   Genesis crystals? <input type="number" name="paid" id="paid">
                 </div>
+
             </div>
-            <!-- Parameters Input End-->
-
-            <!-- Results Output Start -->
-            <!-- Results Output End -->
-
+            <!-- Parameters & Results Col End -->
           </div>
-          <!-- Parameters & Results Col End -->
 
         </div>
         <!-- Outermost Row End -->
