@@ -20,37 +20,38 @@
     <!-- Container Start -->
     <div class="container-fluid">
 
-      <!-- Outermost Row Start -->
-      <div class="row">
+      <form action="/results" method="POST" id="param_form">
+        
+        <!-- Outermost Row Start -->
+        <div class="row">
 
-        <img class="frame" src="static/images/frame.png">
+          <img class="frame" src="static/images/frame.png">
 
-        <!-- Tabs Col Start -->
-        <div class="col-sm">
+          <!-- Tabs Col Start -->
+          <div class="col-sm">
 
-          <div class="tabs">    <!-- Input Tab -->
-            <a href="/">
-              <div id="tabs1">
-                INPUT
-              </div>
-            </a>
+            <div class="tabs">    <!-- Input Tab -->
+              <a href="/">
+                <div id="tabs1">
+                  INPUT
+                </div>
+              </a>
+            </div>
+            <div class="tabs">    <!-- Results Tab -->
+              <a href="/results">
+                <div id="tabs2">
+                  RESULTS
+                </div>
+              </a>
+            </div>
+
           </div>
-          <div class="tabs">    <!-- Results Tab -->
-            <a href="/results">
-              <div id="tabs2">
-              RESULTS
-              </div>
-          </a>
-          </div>
+          <!-- Tabs Col End -->
 
-        </div>
-        <!-- Tabs Col End -->
-
-        <!-- Calc Col Start -->
-        <div class="col-md">
-          <h1> PRIMOGEM CALCULATOR </h1>
-          <br>
-          <form action="/date_range.php">
+          <!-- Calc Col Start -->
+          <div class="col-md">
+            <h1> PRIMOGEM CALCULATOR </h1>
+            <br>
             <label for="start">Start Date:</label>
             <input type="date" id="start" name="start" onchange="cal()">
             <br><br>
@@ -64,20 +65,8 @@
               <button class="days_submit" type="button">OK</button>
             </form>
           </div>
-        </div>
-          <button class="calc" type="submit">ESTIMATE</button>
-          <button class="calc" type="submit" form="param_form">CALCULATE</button>
-        </div>
-        <!-- Calc Col End -->
-
-        <!-- Parameters & Results Col Start -->
-        <div class="col-lg">
-
-          <!-- Disclaimer Start -->
-          <!--
-          <div id="intro"> 
-            <h2 id= "param">➤ Disclaimer & Intructions </h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <button class="calc" type="submit">ESTIMATE</button>
+            <button class="calc" type="submit" form="param_form">CALCULATE</button>
           </div>
         -->
           <!-- Disclaimer End -->
@@ -116,16 +105,12 @@
             </form>
 
           </div>
-          <!-- Parameters Input End-->
-
-          <!-- Results Output Start -->
-          <!-- Results Output End -->
+          <!-- Parameters & Results Col End -->
 
         </div>
-        <!-- Parameters & Results Col End -->
+        <!-- Outermost Row End -->
 
-      </div>
-      <!-- Outermost Row End -->
+      </form>
 
     </div>
     <!-- Container End-->
