@@ -1,5 +1,3 @@
-/* $.cookie('cookie_name', 'cookie_value', { expires: null, path: '/'}); */
-
 function GetDays() {
     var enddt = new Date(document.getElementById("end").value);
     var startdt = new Date(document.getElementById("start").value);
@@ -12,6 +10,7 @@ function cal() {
     }  
 }
 
+/*
 function hideIntro() {
     var x = document.getElementById('intro');
     if (x.style.display = "block") {
@@ -19,7 +18,6 @@ function hideIntro() {
     }
 }
 
-/*
 function displayTab(element) {
     var tabContents = document.getElementsByClassName('tabContent');
     for (var i = 0; i < tabContents.length; ++i) {
