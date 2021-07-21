@@ -10,12 +10,54 @@ def index():
 def results():
     if request.method == "POST":
 
+        # checkbox boolean variables
+        mnEvtCheck, mtlvCheck, dlyCheck, trCheck, wlknCheck, bpCheck = False, False, False, False, False, False
+
+        # retrieving form data
+        patches = 0
+        abyssCycles = 0
+
+        days = int(request.form.get("numdays"))
+
         abyss9 = request.form.get("abyss9")
-        print(abyss9)
-        days = request.form.get("numdays")
-        print(days)
-        #return redirect(request.url)
-    return render_template("results.html", abyss9=abyss9, days=days)
+        abyss10 = request.form.get("abyss10")
+        abyss11 = request.form.get("abyss11")
+        abyss12 = request.form.get("abyss12")
+
+        if request.form.get("main_event"):
+            mnEvtCheck = True
+        sideEvt = request.form.get("side_event")
+        newQuests = request.form.get("new_quests")
+
+        if request.form.get("maint_live"):
+            mtlvCheck = True
+        if request.form.get("dailies"):
+            dlyCheck = True
+        if request.form.get("test_runs"):
+            trCheck = True
+
+        if request.form.get("welkin"):
+            wlknCheck = True
+        if request.form.get("bp"):
+            bpCheck = True
+        paid = request.form.get("paid")
+
+        # declaring calc variables
+        abyssP = 0
+        dailiesP = 0
+        welkinP = 0
+
+        # calculations
+        if dlyCheck:
+            dailiesP = days * 60
+        if wlknCheck:
+            welkinP = days * 90
+
+        # adding to the total
+        total = 0
+        total = dailiesP + welkinP
+
+    return render_template("results.html", abyss9=abyss9, days=days, total=total)
 
 if __name__ == '__main__':
     app.run(debug=True)
