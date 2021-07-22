@@ -57,7 +57,10 @@ def results():
         total = 0
         total = dailiesP + welkinP
 
-    return render_template("results.html", abyss9=abyss9, days=days, total=total)
+    return render_template ("results.html",
+        days=days, total=total,
+        abyssP=abyssP, dailiesP=dailiesP, welkinP=welkinP
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)

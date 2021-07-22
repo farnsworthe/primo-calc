@@ -26,6 +26,7 @@ h1 {
 h2 {
     color: #84603D;
     font-size: 1vw;
+    margin: .6vw 0 0 2.7vw;
 }
 
 #param {
@@ -173,6 +174,42 @@ img {
     width: 43.5vw;
     height: 7.6vw;
     padding: 3%;
+}
+
+.abyss {
+    background-image: url('images/abyss.png');
+    background-size: 5%;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: -.5vw 0 .3vw 0;
+    border: 1px solid transparent;
+}
+
+.events {
+    background-image: url('images/events.png');
+    background-size: 5%;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: -.5vw 0 .3vw 0;
+    border: 1px solid transparent;
+}
+
+.misc {
+    background-image: url('images/misc.png');
+    background-size: 5%;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: -.5vw 0 .3vw 0;
+    border: 1px solid transparent;
+}
+
+.paid {
+    background-image: url('images/paid.png');
+    background-size: 5.5%;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: -.5vw 0 .3vw 0;
+    border: 1px solid transparent;
 }
 
 form {
