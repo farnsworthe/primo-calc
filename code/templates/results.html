@@ -38,7 +38,6 @@
               </a>
             </div>
             <div class="tabs">    <!-- Results Tab -->
-              <a href="/results">
                 <div id="tabs2v2">
                 RESULTS
                 </div>
@@ -57,9 +56,15 @@
               </div>
             </div>
 
+            <span class="totaltxt">TOTAL</span>
+            <div class="totaldiv">            </div>
+
             <div class="primototal">
               <img class="primo" src="static/images/primogem.png">
-              <div class="primoval">{{total}}</div>
+            </div>
+
+            <div class="primototal2">
+              <span class="primoval"> {{total}} </span>
             </div>
 
           </div>
@@ -87,7 +92,7 @@
           
               <div class="parameters"> 
                 <div class="misc"> <h2 id= "param">MISC FREE PRIMOGEMS</h2> </div>
-                Maintenance and livestream: {{maint_live}} / Dailies: {{dailiesP}} / Test Runs:
+                Dailies: {{dailiesP}} / Maintenance and livestream: {{maint_live}} / Test Runs:
               </div>
           
               <div class="parameters"> 
