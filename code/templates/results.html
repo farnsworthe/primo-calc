@@ -38,7 +38,6 @@
               </a>
             </div>
             <div class="tabs">    <!-- Results Tab -->
-              <a href="/results">
                 <div id="tabs2v2">
                 RESULTS
                 </div>
@@ -57,9 +56,15 @@
               </div>
             </div>
 
+            <span class="totaltxt">TOTAL</span>
+            <div class="totaldiv">            </div>
+
             <div class="primototal">
               <img class="primo" src="static/images/primogem.png">
-              <div class="primoval">{{total}}</div>
+            </div>
+
+            <div class="primototal2">
+              <span class="primoval"> {{total}} </span>
             </div>
 
           </div>
@@ -72,24 +77,26 @@
             <div id="tabs-2">
 
               <div class="parameters"> 
-                <h2 id= "param">➤ ABYSS RESULTS = {{abyssP}} primos</h2>
+                <div class="abyss"> <h2 id="param">ABYSS RESET = {{abyssP}} primos</h2> </div>
                 Abyss floor 9: {{abyss9P}} primos &emsp; Abyss floor 10: {{abyss10P}} primos<br>
                 Abyss floor 11: {{abyss11P}} primos &emsp; Abyss floor 12: {{abyss12P}} primos
               </div>
           
               <div class="parameters"> 
-                <h2 id= "param">➤ RESULTS </h2>
+
+                <div class="events"><h2 id= "param">EVENTS</h2></div>
+
                 Main Event? {{main_event}}, Side Events?, Quests?
               </div>
           
               <div class="parameters"> 
-                <h2 id= "param">➤ RESULTS </h2>
-                Maintenance and livestream?, Dailies?, Test Runs?
+                <div class="misc"> <h2 id= "param">MISC FREE PRIMOGEMS</h2> </div>
+                Dailies: {{dailiesP}} / Maintenance and livestream: {{maint_live}} / Test Runs:
               </div>
           
               <div class="parameters"> 
-                <h2 id= "param">➤ RESULTS </h2>
-                Welkin?, Battle Pass?, Genesis Crystals?
+                <div class="paid"> <h2 id ="param">PAID PRIMOGEMS</h2> </div>
+                Welkin: {{welkinP}} / Battle Pass: / Genesis Crystals:
               </div>
           
             </div>

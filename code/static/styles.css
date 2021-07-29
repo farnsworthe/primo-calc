@@ -26,6 +26,14 @@ h1 {
 h2 {
     color: #84603D;
     font-size: 1vw;
+    margin: .6vw 0 0 2.7vw;
+}
+
+h3 {
+    color: #84603D;
+    font-size: 1vw;
+    margin-top: -10px;
+    background-color: khaki;
 }
 
 #param {
@@ -55,8 +63,14 @@ img {
     z-index:-2;
 }
 
-.primototal {
-    border: 1px solid rgba(0, 0, 0, 0.11);
+.primototal {       /* container for the primogem img */
+    border: 1px solid transparent;
+    margin-top: 3vw;;
+}
+
+.primototal2 {      /* container for the primogem val */
+    border: 1px solid transparent;
+    margin: -1.27vw 0 0 0;
 }
 
 .primo {
@@ -64,15 +78,28 @@ img {
     width: 4.5vw;
     position: relative;
     border-radius: 4px;
+    z-index: -2;
 }
 
 .primoval {
     background-color: rgba(0, 0, 0, 0.438);
     width: 4.5vw;
-    position: relative;
-    margin: -1.16vw 0 0 6.1vw;
+    display: inline-block;
+    padding: .01vw;
     border-radius: 0 0 4px 4px;
     color: white;
+}
+
+.totaltxt {
+    background-color: #EEE6DE;
+    color: #84603D;
+    padding: 0 .5vw;
+    font-size: 1vw;
+}
+
+.totaldiv {
+    border-top: 2px dashed #D6CABC;
+    margin-top: -.8vw;
 }
 
 .days {     /* days displayed from start/end date selection */
@@ -82,6 +109,7 @@ img {
 
 #numdays2 {     /* days displayed from start/end date selection */
     background-color: transparent;
+    color:#555555;
     border: 0px;
     text-align: center;
     width: 5vw;
@@ -156,16 +184,6 @@ img {
     padding: 1.5vw;
 }
 
-#intro {    /* Disclaimer & Intructions */
-    background-image: linear-gradient(to right, rgba(255, 153, 0, 0.048), #EBE2D8 50%);
-    border: 3px solid #D6CABC;
-    margin: auto auto .5vw auto;
-    width: 43.5vw;
-    height: auto;
-    padding: 3%;
-    line-height: 1.5vw;;
-}
-
 .parameters {
     background-image: linear-gradient(to right, rgba(255, 153, 0, 0.048), #EBE2D8 50%);
     border: 3px solid #D6CABC;
@@ -173,6 +191,42 @@ img {
     width: 43.5vw;
     height: 7.6vw;
     padding: 3%;
+}
+
+.abyss {
+    background-image: url('images/abyss.png');
+    background-size: 5%;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: -.5vw 0 .3vw 0;
+    border: 1px solid transparent;
+}
+
+.events {
+    background-image: url('images/events.png');
+    background-size: 5%;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: -.5vw 0 .3vw 0;
+    border: 1px solid transparent;
+}
+
+.misc {
+    background-image: url('images/misc.png');
+    background-size: 5%;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: -.5vw 0 .3vw 0;
+    border: 1px solid transparent;
+}
+
+.paid {
+    background-image: url('images/paid.png');
+    background-size: 5.5%;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: -.5vw 0 .3vw 0;
+    border: 1px solid transparent;
 }
 
 form {
