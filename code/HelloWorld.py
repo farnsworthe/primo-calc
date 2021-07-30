@@ -16,7 +16,7 @@ def results():
 
         # retrieving form data
         patches = 0
-        abyssCycles = 0
+        abyssCycles = 1
         patchCount = 0
 
         # dates
@@ -127,7 +127,8 @@ def results():
         total = abyssP + dailiesP + welkinP + paid
 
     return render_template("results.html", 
-        days=days, 
+        days=days,
+        abyss9=abyss9, abyss10=abyss10, abyss11=abyss11, abyss12=abyss12,
         abyss9P=abyss9P, abyss10P=abyss10P, abyss11P=abyss11P, abyss12P=abyss12P, abyssP=abyssP,
         dailiesP=dailiesP,
         welkinP=welkinP, paid=paid,
