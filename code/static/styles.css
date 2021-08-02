@@ -95,25 +95,25 @@ img {
     margin-top: -.8vw;
 }
 
-.star {
+.star {         /* abyss star icon */
     width: 1.1vw;
 }
 
-.sprimo {
+.sprimo {       /* small primo icon for parameter values */
     width:1vw;
     padding: 0;
     -webkit-filter: drop-shadow(0px 0px 0px #00000071);
     filter: drop-shadow(0px 0px 0px #00000071);
 }
 
-.pwrapb {
+.pwraps {       /* total primo sum of each parameter section */
     background-color: rgba(255, 255, 255, 0.486);
     color: #555555;
     padding: .2vw .5vw;
     border-radius: 3vw;
 }
 
-.pwrap {
+.pwrap {       /* individual parameters primo value */
     background-color: #55555567;
     color: white;
     padding: .2vw .5vw;
@@ -121,9 +121,10 @@ img {
     border-radius: 3vw;
 }
 
-.abysstotal {
-    position: absolute;
-    margin: .4vw 0 0 34vw;
+.parasum {
+    position: relative;
+    float: right;
+    margin: .4vw 0 0 0;
     font-size: 1vw;
 }
 

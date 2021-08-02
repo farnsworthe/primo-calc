@@ -125,14 +125,21 @@ def results():
 
         # adding to the total
         total = abyssP + dailiesP + welkinP + paid
+        pulls = total//160
+
+        # sum values
+        eventsP = 0 # <-- temp value, change to sum of parameters
+        miscP = dailiesP #+ maint&live + test runs
+        paidP = welkinP #+ bp + crystals
 
     return render_template("results.html", 
         days=days,
         abyss9=abyss9, abyss10=abyss10, abyss11=abyss11, abyss12=abyss12,
         abyss9P=abyss9P, abyss10P=abyss10P, abyss11P=abyss11P, abyss12P=abyss12P, abyssP=abyssP,
-        dailiesP=dailiesP,
-        welkinP=welkinP, paid=paid,
-        total=total)
+        eventsP=eventsP,
+        dailiesP=dailiesP, miscP=miscP,
+        welkinP=welkinP, paid=paid, paidP=paidP,
+        total=total, pulls=pulls)
 
 if __name__ == '__main__':
     app.run(debug=True)
