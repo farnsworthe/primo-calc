@@ -10,6 +10,21 @@ function cal() {
     }  
 }
 
+function fillBlanks() {
+    document.getElementById('abyss9').value=9;
+    document.getElementById("abyss10").value=9;
+    document.getElementById("abyss11").value=0;
+    document.getElementById("abyss12").value=0;
+
+    document.getElementById("main_event").checked = true;
+    document.getElementById("side_event").value=3;
+    document.getElementById("new_quests").value=2;
+
+    document.getElementById("dailies").checked = true;
+    document.getElementById("maint_live").checked = true;
+    document.getElementById("test_runs").checked = true;
+}
+
 /*
 function hideIntro() {
     var x = document.getElementById('intro');

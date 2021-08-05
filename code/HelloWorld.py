@@ -17,7 +17,7 @@ def results():
         # retrieving form data
         patches = 0
         abyssCycles = 1
-        patchCount = 0
+        patchCount = 1
 
         # dates
         days = int(request.form.get("numdays"))
@@ -106,10 +106,11 @@ def results():
 
         # declaring calc variables
         dailiesP = 0
+        mainliveP = 0
+        testrunP = 0
         welkinP = 0
-
-        # abyss primos
-
+        bpP = 0
+        bpFates = 0
 
         # calculations
         abyss9P = (abyss9//3) * 50 
@@ -120,25 +121,32 @@ def results():
 
         if dlyCheck:
             dailiesP = days * 60
+        if mtlvCheck:
+            mainliveP = patchCount * 600
+        if trCheck:
+            testrunP = patchCount * 40
         if wlknCheck:
             welkinP = days * 90
+        if bpCheck:
+            bpP = patchCount * 680
+            bpFates = patchCount * 4
 
         # adding to the total
-        total = abyssP + dailiesP + welkinP + paid
+        total = abyssP + dailiesP + mainliveP + testrunP + welkinP + bpP + (bpFates * 160) + paid
         pulls = total//160
 
         # sum values
         eventsP = 0 # <-- temp value, change to sum of parameters
-        miscP = dailiesP #+ maint&live + test runs
-        paidP = welkinP #+ bp + crystals
+        miscP = dailiesP + mainliveP + testrunP 
+        paidP = welkinP + bpP + (bpFates * 160) + paid
 
     return render_template("results.html", 
         days=days,
         abyss9=abyss9, abyss10=abyss10, abyss11=abyss11, abyss12=abyss12,
         abyss9P=abyss9P, abyss10P=abyss10P, abyss11P=abyss11P, abyss12P=abyss12P, abyssP=abyssP,
         eventsP=eventsP,
-        dailiesP=dailiesP, miscP=miscP,
-        welkinP=welkinP, paid=paid, paidP=paidP,
+        dailiesP=dailiesP, mainliveP = mainliveP, testrunP = testrunP, miscP=miscP,
+        welkinP=welkinP, bpP = bpP, bpFates = bpFates, paid=paid, paidP=paidP,
         total=total, pulls=pulls)
 
 if __name__ == '__main__':
