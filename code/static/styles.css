@@ -4,6 +4,10 @@
     format('truetype');
 }
 
+* {
+    cursor: url("images/cursor.cur"), default;
+}
+
 body {
     /* Placeholder bg, we can change it to anything we decide later */
     background: url('https://i.redd.it/66ic9c791ih61.png') fixed center no-repeat;
@@ -29,6 +33,17 @@ h2 {
     margin: .6vw 0 0 2.7vw;
 }
 
+h3 {
+    color: #555555;
+    font-size: 1.5vw;
+    padding: 2vw 0 1vw 0;
+    border-bottom: 3px solid #D6CABC;
+    width: 90%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
 #param {
     padding-bottom: .6vw;
 }
@@ -44,6 +59,10 @@ h2 {
     margin: .5vw auto;
     padding: .5vw;
     width: 14vw;
+}
+
+.calc:active {
+    outline: 0;
 }
 
 img {
@@ -269,13 +288,88 @@ input {
 input[type=number] {
     width: 2.7vw;
     margin: 0px .5vw;
-  }
+}
 
 input[type=number]:focus {
     transition: background-color .35s ease-in-out;
     background-color:  #D6CABC;
-  }
+}
 
 input[type=checkbox] {
     width: 1.8vw;
+}
+
+#popwrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.445);
+    z-index: 1001;
+}
+
+#popup {
+    position: relative;
+    top: 20%;
+    height: 32vw;
+}
+
+#popuptxt {
+    background-image: url('images/popup.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    text-align: left;
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    text-align: left;
+    line-height: 2vw;
+    padding-left: 1.3vw;
+}
+
+#popupbt {
+    background: #4A5365;
+    color: white;
+    font-size: .9vw;
+    border-radius: 3vw;
+    border: .16vw solid #4A5365;
+    padding: .6vw;
+    width: 14vw;
+    margin: 1.5vw auto;
+    text-align: center;
+    line-height: normal;
+}
+
+#popupbt:hover {
+    border: .16vw solid #FFE8B2;
+}
+
+#oCircle {
+    background: #313131;
+    border-radius: 50%;
+    height: 1.8vw;
+    width: 1.8vw;
+    position: relative;
+    float: left;
+    margin: -.34vw 0 0 -.28vw;
+  }
+
+  #iCircle {
+    position: absolute;
+    border: .15vw solid #FFD332;
+    border-radius: 50%;
+    height: .9vw;
+    width: .9vw;
+    top: 50%;
+    left: 50%;
+    margin: -.45vw 0 0 -.45vw;
+    float: left;
+  }
+
+  #paimon {
+    width: 6vw;
+    display: block;
+    margin: 2vw auto auto auto;
   }
