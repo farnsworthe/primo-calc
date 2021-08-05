@@ -3,6 +3,8 @@
 
   <head>
 
+    <link rel="shortcut icon" href="static/images/sprimogem.png" />
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,6 +21,32 @@
 
     <!-- Container Start -->
     <div class="container-fluid">
+
+      <div id="popwrap" style='display:none'>
+        <div id="popup">
+
+          <!-- <img class="popup" src="static/images/popup.png"> -->
+
+          <div id="popuptxt">
+
+            <h3>Disclaimer & Instructions</h3><br>
+
+            <img class="star" src="static/images/star.png"> &emsp;Date selection begins at beginning of 2.0 patch <br>
+            <img class="star" src="static/images/star.png"> &emsp;Values for events are estimated based on data from previous patches; may not be accurate <br>
+            <img class="star" src="static/images/star.png"> &emsp;Does not factor in any value from fates (like monthly shop), aka primos ONLY (with exception of bp) <br>
+            <img class="star" src="static/images/star.png"> &emsp;Welkin 300 genesis crystals not included (but can be manually inputted into the genesis crystal param?) <br>
+            <img class="star" src="static/images/star.png"> &emsp;Estimate button is to input average values for all fields (f2p assumed), and you may edit them as needed. <br>
+
+            <img id="paimon" src="static/images/paimon.png">
+
+            <div id="popupbt" onclick="popUp('hide')">
+              <div id="oCircle"><div id="iCircle"></div></div>
+              Confirm </div>
+            
+          </div>
+
+        </div>
+      </div>
 
       <form action="/results" method="POST" id="param_form">
         
@@ -64,7 +92,7 @@
               </div>
             </div>
 
-            <button class="calc" type="submit">ESTIMATE</button>
+            <button class="calc" type="button" id="estimate" onclick="fillBlanks()">ESTIMATE</button>
             <button class="calc" type="submit" form="param_form">CALCULATE</button>
 
           </div>
