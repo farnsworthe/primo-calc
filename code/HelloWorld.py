@@ -2,6 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 from flask import render_template, request, redirect
 import datetime 
+from dateutil.relativedelta import *
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -25,6 +26,22 @@ def results():
         endDate = request.form.get("end")
         startdate_object = datetime.datetime.strptime(startDate, "%Y-%m-%d")
         enddate_object = datetime.datetime.strptime(endDate, "%Y-%m-%d")
+        abyss1 = startdate_object
+        abyss16 = startdate_object
+
+        # finding the next two dates in abyss
+        if int(startdate_object.day) > 1:
+            abyss1 = abyss1 + relativedelta(months=+1)
+            abyss1.day = 1
+        if int(startdate_object.day) > 16:
+            abyss2 = abyss2 + relativedelta(months=+1)
+            abyss2.day = 16
+        else:
+            abyss2.day = 16
+
+        print(abyss1)
+        print(abyss2)
+
 
         list = []
 
@@ -51,11 +68,14 @@ def results():
 
         list_length = len(list)
 
+        
         for i in range(list_length):
-            if (startdate_object <= list[i] <= enddate_object):
+            if startdate_object <= list[i] <= enddate_object:
                 patchCount += 1
             else:
                 break
+
+        
 
 
         print(patchCount)
@@ -128,7 +148,9 @@ def results():
         pulls = total//160
 
         # sum values
-        eventsP = 0 # <-- temp value, change to sum of parameters
+        if mnEvtCheck == true:
+            eventsP = 872 * patchCount 
+        eventsP = (side_event * 413) * patchCount
         miscP = dailiesP #+ maint&live + test runs
         paidP = welkinP #+ bp + crystals
 
