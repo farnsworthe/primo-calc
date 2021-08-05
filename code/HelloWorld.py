@@ -99,10 +99,15 @@ def results():
 
         ##########
 
+        sideEvt = 0
+        newQuests = 0
+
         if request.form.get("main_event"):
             mnEvtCheck = True
-        sideEvt = request.form.get("side_event")
-        newQuests = request.form.get("new_quests")
+        if request.form.get("side_event"):
+            sideEvt = int(request.form.get("side_event"))
+        if request.form.get("new_quests"):
+            newQuests = int(request.form.get("new_quests"))
 
         ##########
 
@@ -125,6 +130,9 @@ def results():
             paid = int(request.form.get("paid"))
 
         # declaring calc variables
+        mnEvtP = 0
+        sideEvtP = 0
+        newQuestsP = 0
         dailiesP = 0
         mainliveP = 0
         testrunP = 0
@@ -150,23 +158,26 @@ def results():
         if bpCheck:
             bpP = patchCount * 680
             bpFates = patchCount * 4
+        if mnEvtCheck:
+            mnEvtP = patchCount * 872
+
+        sideEvtP = patchCount * sideEvt * 413
+        newQuestsP = patchCount * newQuests * 60
 
         # adding to the total
-        total = abyssP + dailiesP + mainliveP + testrunP + welkinP + bpP + (bpFates * 160) + paid
+        total = abyssP + mnEvtP + sideEvtP + newQuestsP + dailiesP + mainliveP + testrunP + welkinP + bpP + (bpFates * 160) + paid
         pulls = total//160
 
         # sum values
-        if mnEvtCheck == true:
-            eventsP = 872 * patchCount 
-        eventsP = (side_event * 413) * patchCount
-        miscP = dailiesP #+ maint&live + test runs
-        paidP = welkinP #+ bp + crystals
+        eventsP = mnEvtP + sideEvtP + newQuestsP 
+        miscP = dailiesP + mainliveP + testrunP 
+        paidP = welkinP + bpP + (bpFates * 160) + paid
 
     return render_template("results.html", 
         days=days,
         abyss9=abyss9, abyss10=abyss10, abyss11=abyss11, abyss12=abyss12,
         abyss9P=abyss9P, abyss10P=abyss10P, abyss11P=abyss11P, abyss12P=abyss12P, abyssP=abyssP,
-        eventsP=eventsP,
+        mnEvtP=mnEvtP, sideEvtP=sideEvtP, newQuestsP=newQuestsP, eventsP=eventsP,
         dailiesP=dailiesP, mainliveP = mainliveP, testrunP = testrunP, miscP=miscP,
         welkinP=welkinP, bpP = bpP, bpFates = bpFates, paid=paid, paidP=paidP,
         total=total, pulls=pulls)
