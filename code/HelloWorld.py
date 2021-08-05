@@ -27,7 +27,7 @@ def results():
         startdate_object = datetime.datetime.strptime(startDate, "%Y-%m-%d")
         enddate_object = datetime.datetime.strptime(endDate, "%Y-%m-%d")
         abyss1 = startdate_object
-        abyss16 = startdate_object
+        abyss2 = startdate_object
 
         # finding the next two dates in abyss
         if int(startdate_object.day) > 1:
