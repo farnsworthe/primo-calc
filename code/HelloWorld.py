@@ -156,17 +156,11 @@ def results():
         pulls = total//160
 
         # sum values
-<<<<<<< HEAD
         if mnEvtCheck == true:
             eventsP = 872 * patchCount 
         eventsP = (side_event * 413) * patchCount
         miscP = dailiesP #+ maint&live + test runs
         paidP = welkinP #+ bp + crystals
-=======
-        eventsP = 0 # <-- temp value, change to sum of parameters
-        miscP = dailiesP + mainliveP + testrunP 
-        paidP = welkinP + bpP + (bpFates * 160) + paid
->>>>>>> 65426a839cdda68b0e0bd69c3a0b99e915943082
 
     return render_template("results.html", 
         days=days,
