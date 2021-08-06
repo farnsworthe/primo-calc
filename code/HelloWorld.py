@@ -17,7 +17,7 @@ def results():
 
         # retrieving form data
         patches = 0
-        abyssCycles = 1
+        abyssCycles = 0
         patchCount = 1
 
         # dates
@@ -27,20 +27,52 @@ def results():
         startdate_object = datetime.datetime.strptime(startDate, "%Y-%m-%d")
         enddate_object = datetime.datetime.strptime(endDate, "%Y-%m-%d")
         abyss1 = startdate_object
-        abyss16 = startdate_object
+        abyss2 = startdate_object
 
         # finding the next two dates in abyss
-        if int(startdate_object.day) > 1:
+        '''if int(startdate_object.day) > 1:
             abyss1 = abyss1 + relativedelta(months=+1)
             abyss1.day = 1
         if int(startdate_object.day) > 16:
             abyss2 = abyss2 + relativedelta(months=+1)
             abyss2.day = 16
         else:
-            abyss2.day = 16
+            abyss2.day = 16'''
+
+        # if start day is 1
+        if int(startdate_object.day) == 1:
+            abyss2 = datetime.datetime(startdate_object.year, startdate_object.month, 16)
+
+        # if start day is 16
+        if int(startdate_object.day) == 16:
+            abyss1 = datetime.datetime(startdate_object.year, startdate_object.month, 1)
+            abyss1 += relativedelta(months=+1) # add a month bc 1st of next month
+
+        # if the day is not already on 1 or 16
+        if int(startdate_object.day) < 16 and int(startdate_object.day) > 1: 
+            abyss1 = datetime.datetime(startdate_object.year, startdate_object.month, 1)
+            abyss1 += relativedelta(months=+1) # add a month bc 1st of next month
+            abyss2 = datetime.datetime(startdate_object.year, startdate_object.month, 16)
+        if int(startdate_object.day) > 16 and int(startdate_object.day) <= 31:
+            abyss1 = datetime.datetime(startdate_object.year, startdate_object.month, 1)
+            abyss1 += relativedelta(months=+1) # add a month bc 1st of next month
+            abyss2 = datetime.datetime(startdate_object.year, startdate_object.month, 16)
+            abyss2 += relativedelta(months=+1) # add a month bc 16th of next month
+
+        while abyss1 <= enddate_object:
+            abyss1 += relativedelta(months=+1)
+            abyssCycles += 1
+        while abyss2 <= enddate_object:
+            abyss2 += relativedelta(months=+1)
+            abyssCycles += 1
+        
+        # if the duration is less than a full cycle
+        if abyssCycles == 0:
+            abyssCycles = 1
 
         print(abyss1)
         print(abyss2)
+        print(abyssCycles)
 
 
         list = []
@@ -78,7 +110,7 @@ def results():
         
 
 
-        print(patchCount)
+        #print(patchCount)
     
 
         ##########
