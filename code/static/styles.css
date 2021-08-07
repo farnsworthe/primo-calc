@@ -19,6 +19,10 @@ body {
     overflow-y: hidden;
 }
 
+img {
+    width:100%;
+}
+
 h1 {
     color: #84603D;
     font-size: 1.5vw;
@@ -34,9 +38,9 @@ h2 {
 }
 
 h3 {
-    color: #555555;
+    color: #84603D;
     font-size: 1.5vw;
-    padding: 2vw 0 1vw 0;
+    padding: 1.5vw 0 .8vw 0;
     border-bottom: 3px solid #D6CABC;
     width: 90%;
     display: block;
@@ -44,234 +48,15 @@ h3 {
     text-align: center;
 }
 
-#param {
-    padding-bottom: .6vw;
-}
-
-.calc {     /* estimate and calculate buttons */
+footer {
+    color: #84603D;
+    font-size: .6vw;
+    padding: 2vw 0 .4vw 0;
+    border-bottom: 3px solid #D6CABC;
+    width: 90%;
     display: block;
-    background-color: #ebddce;
-    border: 3px double #D6CABC;
-    border-radius: 4px;
-    color: #84603D;
+    margin: auto auto 1.2vw auto;
     text-align: center;
-    font-size: 1vw;
-    margin: .5vw auto;
-    padding: .5vw;
-    width: 14vw;
-}
-
-.calc:active {
-    outline: 0;
-}
-
-img {
-    width:100%;
-}
-
-.frame {
-    -webkit-filter: drop-shadow(5px 5px 5px #222 );
-    filter: drop-shadow(2px 2px 2px #222);
-    z-index:-2;
-}
-
-.primototal {       /* container for the primogem img */
-    border: 1px solid transparent;
-    margin-top: 3vw;;
-}
-
-.primototal2 {      /* container for the primogem val */
-    border: 1px solid transparent;
-    margin: -1.27vw 0 0 0;
-}
-
-.primo {
-    background-image: linear-gradient(to top, #D79844, #B8834B 50%);
-    width: 4.5vw;
-    position: relative;
-    border-radius: 4px;
-    z-index: -2;
-}
-
-.primoval {
-    background-color: rgba(0, 0, 0, 0.438);
-    width: 4.5vw;
-    display: inline-block;
-    padding: .01vw;
-    border-radius: 0 0 4px 4px;
-    color: white;
-}
-
-.totaltxt {
-    background-color: #EEE6DE;
-    color: #84603D;
-    padding: 0 .5vw;
-    font-size: 1vw;
-}
-
-.totaldiv {
-    border-top: 2px dashed #D6CABC;
-    margin-top: -.8vw;
-}
-
-.star {         /* abyss star icon */
-    width: 1.1vw;
-}
-
-.sprimo {       /* small primo icon for parameter values */
-    width:1vw;
-    padding: 0;
-    -webkit-filter: drop-shadow(0px 0px 0px #00000071);
-    filter: drop-shadow(0px 0px 0px #00000071);
-}
-
-.pwraps {       /* total primo sum of each parameter section */
-    background-color: rgba(255, 255, 255, 0.486);
-    color: #555555;
-    padding: .2vw .5vw;
-    border-radius: 3vw;
-}
-
-.pwrap {       /* individual parameters primo value */
-    background-color: #55555567;
-    color: white;
-    padding: .2vw .5vw;
-    border: 2px solid rgba(255, 255, 255, 0.514);
-    border-radius: 3vw;
-}
-
-.parasum {
-    position: relative;
-    float: right;
-    margin: .4vw 0 0 0;
-    font-size: 1vw;
-}
-
-.days {     /* days displayed from start/end date selection */
-    margin: 5vw auto;
-    font-size: 1.6vw;
-}
-
-#numdays2 {     /* days displayed from start/end date selection */
-    background-color: transparent;
-    color:#555555;
-    border: 0px;
-    text-align: center;
-    width: 5vw;
-}
-
-.deco {     /* the circle image thing */
-    background-image: url('images/deco.png');
-    background-size: 85%;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: .5vw;
-    border: 1px solid transparent;
-}
-
-.container-fluid {
-    margin: auto;
-    height: 100vh;
-    padding: 0vw;
-}
-
-.row {  /* The outermost row */
-    margin: auto;
-}
-
-.col-sm {   /* The col with the tabs */
-    position: absolute;
-    margin: 10.4vw 10.7vw auto;
-    max-width: 9vw;
-    text-align: center;
-    color: white;
-}
-
-.col-md {   /* The col with the calc button */
-    position: absolute;
-    margin: 12.5vw 20vw auto;
-    max-width: 18vw;
-    text-align: center;
-}
-
-.col-lg {   /* The col with the parameters */
-    position: absolute;
-    margin: 13.4vw auto auto 38.4vw;
-    max-width: 44.5vw;
-}
-
-.tabs {
-    margin: auto auto .8vw auto;
-    font-size: 1vw;
-}
-
-.tabs a:hover {
-    text-decoration: none;
-}
-
-#tabs1 {    /* Input tab on input page */
-    color: #84603D;
-    padding: 1.5vw;
-}
-
-#tabs2 {    /* Results tab on input page */
-    color: white;
-    padding: 1.5vw;
-}
-
-#tabs1v2 {  /* Input tab on results page*/
-    color: white;
-    padding: 1.5vw;
-}
-
-#tabs2v2 {  /* Results tab on results page */
-    color: #84603D;
-    padding: 1.5vw;
-}
-
-.parameters {
-    background-image: linear-gradient(to right, rgba(255, 153, 0, 0.048), #EBE2D8 50%);
-    border: 3px solid #D6CABC;
-    margin: auto auto .5vw auto;
-    width: 43.5vw;
-    height: 7.6vw;
-    padding: 3%;
-}
-
-.abyss {
-    background-image: url('images/abyss.png');
-    background-size: 5%;
-    background-position: left;
-    background-repeat: no-repeat;
-    margin: -.5vw 0 .3vw 0;
-    border: 1px solid transparent;
-}
-
-.events {
-    background-image: url('images/events.png');
-    background-size: 5%;
-    background-position: left;
-    background-repeat: no-repeat;
-    margin: -.5vw 0 .3vw 0;
-    border: 1px solid transparent;
-}
-
-.misc {
-    background-image: url('images/misc.png');
-    background-size: 5%;
-    background-position: left;
-    background-repeat: no-repeat;
-    margin: -.5vw 0 .3vw 0;
-    border: 1px solid transparent;
-}
-
-.paid {
-    background-image: url('images/paid.png');
-    background-size: 5.5%;
-    background-position: left;
-    background-repeat: no-repeat;
-    margin: -.5vw 0 .3vw 0;
-    border: 1px solid transparent;
 }
 
 form {
@@ -299,77 +84,346 @@ input[type=checkbox] {
     width: 1.8vw;
 }
 
-#popwrap {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.445);
-    z-index: 1001;
-}
 
-#popup {
-    position: relative;
-    top: 20%;
-    height: 32vw;
-}
+/* Outermost Containers Start */
 
-#popuptxt {
-    background-image: url('images/popup.png');
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: white;
-    text-align: left;
-    display: block;
-    width: 50%;
-    height: 100%;
-    margin: auto;
-    text-align: left;
-    line-height: 2vw;
-    padding-left: 1.3vw;
-}
+    .container-fluid {
+        margin: auto;
+        height: 100vh;
+        padding: 0vw;
+    }
 
-#popupbt {
-    background: #4A5365;
-    color: white;
-    font-size: .9vw;
-    border-radius: 3vw;
-    border: .16vw solid #4A5365;
-    padding: .6vw;
-    width: 14vw;
-    margin: 1.5vw auto;
-    text-align: center;
-    line-height: normal;
-}
+    .row {
+        margin: auto;
+    }
 
-#popupbt:hover {
-    border: .16vw solid #FFE8B2;
-}
+    .frame {
+        -webkit-filter: drop-shadow(5px 5px 5px #222 );
+        filter: drop-shadow(2px 2px 2px #222);
+        z-index:-2;
+    }
 
-#oCircle {
-    background: #313131;
-    border-radius: 50%;
-    height: 1.8vw;
-    width: 1.8vw;
-    position: relative;
-    float: left;
-    margin: -.34vw 0 0 -.28vw;
-  }
+/* Outermost Containers End */
 
-  #iCircle {
-    position: absolute;
-    border: .15vw solid #FFD332;
-    border-radius: 50%;
-    height: .9vw;
-    width: .9vw;
-    top: 50%;
-    left: 50%;
-    margin: -.45vw 0 0 -.45vw;
-    float: left;
-  }
 
-  #paimon {
-    width: 6vw;
-    display: block;
-    margin: 2vw auto auto auto;
-  }
+/* Tabs Col Start */
+
+    .col-sm {
+        position: absolute;
+        margin: 10.4vw 10.7vw auto;
+        max-width: 9vw;
+        text-align: center;
+        color: white;
+    }
+
+    .tabs {
+        margin: auto auto .8vw auto;
+        font-size: 1vw;
+    }
+    .tabs a:hover {
+        text-decoration: none;
+    }
+
+    /* Input Tab on Input Page */
+    #tabs1 {
+        color: #84603D;
+        padding: 1.5vw;
+    }
+    /* Results Tab on Input Page */
+    #tabs2 {
+        color: white;
+        padding: 1.5vw;
+    }
+
+    /* Input Tab on Results Page */
+    #tabs1v2 {
+        color: white;
+        padding: 1.5vw;
+    }
+    /* Results tab on Results Page */
+    #tabs2v2 {
+        color: #84603D;
+        padding: 1.5vw;
+    }
+
+/* Tabs Col End */
+
+
+/* Calc Col Start */
+
+    .col-md {
+        position: absolute;
+        margin: 12.5vw 20vw auto;
+        max-width: 18vw;
+        text-align: center;
+    }
+
+    /* Days Displayed from Start/End Date Selection */
+    .days {
+        margin: 5vw auto;
+        font-size: 1.6vw;
+    }
+    #numdays2 {
+        background-color: transparent;
+        color:#555555;
+        border: 0px;
+        text-align: center;
+        width: 5vw;
+    }
+
+    /* Days Circle Decoration */
+    .deco {
+        background-image: url('images/deco.png');
+        background-size: 85%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: .5vw;
+        border: 1px solid transparent;
+    }
+
+    /* Estimate & Calculate Buttons */
+    .calc {
+        display: block;
+        background-color: #ebddce;
+        border: 3px double #D6CABC;
+        border-radius: 4px;
+        color: #84603D;
+        text-align: center;
+        font-size: 1vw;
+        margin: .5vw auto;
+        padding: .5vw;
+        width: 14vw;
+    }
+
+/* Calc Col End */
+
+
+/* Parameters Col Start */
+
+    .col-lg {   /* The col with the parameters */
+        position: absolute;
+        margin: 13.4vw auto auto 38.4vw;
+        max-width: 44.5vw;
+    }
+
+    /* Parameter Boxes */
+    .parameters {
+        background-image: linear-gradient(to right, rgba(255, 153, 0, 0.048), #EBE2D8 50%);
+        border: 3px solid #D6CABC;
+        margin: auto auto .5vw auto;
+        width: 43.5vw;
+        height: 7.6vw;
+        padding: 3%;
+    }
+
+    /* Parameter Labels */
+    #param {
+        padding-bottom: .6vw;
+    }
+
+    /* Parameter Bullets */
+    .abyss {
+        background-image: url('images/abyss.png');
+        background-size: 5%;
+        background-position: left;
+        background-repeat: no-repeat;
+        margin: -.5vw 0 .3vw 0;
+        border: 1px solid transparent;
+    }
+    .events {
+        background-image: url('images/events.png');
+        background-size: 5%;
+        background-position: left;
+        background-repeat: no-repeat;
+        margin: -.5vw 0 .3vw 0;
+        border: 1px solid transparent;
+    }
+    .misc {
+        background-image: url('images/misc.png');
+        background-size: 5%;
+        background-position: left;
+        background-repeat: no-repeat;
+        margin: -.5vw 0 .3vw 0;
+        border: 1px solid transparent;
+    }
+    .paid {
+        background-image: url('images/paid.png');
+        background-size: 5.5%;
+        background-position: left;
+        background-repeat: no-repeat;
+        margin: -.5vw 0 .3vw 0;
+        border: 1px solid transparent;
+    }
+
+/* Parameters Col End */
+
+
+/* Results Styles Start */
+
+    /* Total Label */
+    .totaltxt {
+        background-color: #EEE6DE;
+        color: #84603D;
+        padding: 0 .5vw;
+        font-size: 1vw;
+    }
+    /* Total Label Divider */
+    .totaldiv {
+        border-top: 2px dashed #D6CABC;
+        margin-top: -.8vw;
+    }
+
+    /* Total Primogems Box Container */
+    .primoBox {
+        border: 1px solid transparent;
+        margin-top: 3vw;;
+    }
+    /* Total Primogem Image Box Gradient */
+    .primo {
+        background-image: linear-gradient(to top, #D79844, #B8834B 50%);
+        width: 4.5vw;
+        position: relative;
+        border-radius: 4px;
+        z-index: -2;
+    }
+    /* Total Primogem Val Container */
+    .primoBoxVal {
+        border: 1px solid transparent;
+        margin: -1.27vw 0 0 0;
+    }
+    .primoBoxVal span {
+        background-color: rgba(0, 0, 0, 0.438);
+        width: 4.5vw;
+        display: inline-block;
+        padding: .01vw;
+        border-radius: 0 0 4px 4px;
+        color: white;
+    }
+
+    /* Abyss Star Icon */
+    .star {
+        width: 1.1vw;
+    }
+
+    /* Small Primogem Icon for Parameter Values */
+    .sprimo {
+        width:1vw;
+        padding: 0;
+        -webkit-filter: drop-shadow(0px 0px 0px #00000071);
+        filter: drop-shadow(0px 0px 0px #00000071);
+    }
+
+    /* Parameter Sum Values */
+    .paraSum {
+        position: relative;
+        float: right;
+        margin: .4vw 0 0 0;
+        font-size: 1vw;
+    }
+    .paraSum span {
+        background-color: rgba(255, 255, 255, 0.486);
+        color: #555555;
+        padding: .2vw .5vw;
+        border-radius: 3vw;
+    }
+
+    /* Parameter Individual Values */
+    .pwrap {
+        background-color: #55555567;
+        color: white;
+        padding: .2vw .5vw;
+        border: 2px solid rgba(255, 255, 255, 0.514);
+        border-radius: 3vw;
+    }
+
+/* Results Styles End */
+
+
+/* PopUp Start */
+
+    /* Open PopUp Button */
+    #info {
+        height: 3.6vw;
+        width: 3.6vw;
+        border: 1px solid transparent;
+        float: right;
+        margin: -3vw -6.6vw auto auto;
+        text-align: center;
+        font-size: 1.8vw;
+        color: #F1EADF;
+    }
+
+    #popwrap {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.445);
+        z-index: 1001;
+    }
+    #popup {
+        position: relative;
+        top: 20%;
+        height: 32vw;
+    }
+
+    #popuptxt {
+        background-image: url('images/popup.png');
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+        text-align: left;
+        display: block;
+        width: 50%;
+        height: 100%;
+        margin: auto;
+        text-align: left;
+        line-height: 2vw;
+        padding-left: 1.3vw;
+    }
+    #popuptxt span {
+        color: #84603D;
+        border-bottom: 2px solid #D6CABC;
+    }
+    #popuptxt img {
+        width: .9vw;
+    }
+
+    /* Close PopUp Button */
+    #popupbt {
+        background: #4A5365;
+        color: white;
+        font-size: .9vw;
+        border-radius: 3vw;
+        border: .16vw solid #4A5365;
+        padding: .6vw;
+        width: 14vw;
+        margin: auto;
+        text-align: center;
+        line-height: normal;
+    }
+    #popupbt:hover {
+        border: .16vw solid #FFE8B2;
+    }
+    #oCircle {
+        background: #313131;
+        border-radius: 50%;
+        height: 1.8vw;
+        width: 1.8vw;
+        position: relative;
+        float: left;
+        margin: -.34vw 0 0 -.28vw;
+    }
+    #iCircle {
+        position: absolute;
+        border: .15vw solid #FFD332;
+        border-radius: 50%;
+        height: .9vw;
+        width: .9vw;
+        top: 50%;
+        left: 50%;
+        margin: -.45vw 0 0 -.45vw;
+        float: left;
+    }
+
+/* PopUp End */

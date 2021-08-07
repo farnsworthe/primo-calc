@@ -22,31 +22,27 @@
     <!-- Container Start -->
     <div class="container-fluid">
 
+      <!-- PopUp Start -->
       <div id="popwrap" style='display:none'>
         <div id="popup">
-
-          <!-- <img class="popup" src="static/images/popup.png"> -->
-
           <div id="popuptxt">
-
             <h3>Disclaimer & Instructions</h3><br>
-
-            <img class="star" src="static/images/star.png"> &emsp;Date selection begins at beginning of 2.0 patch <br>
-            <img class="star" src="static/images/star.png"> &emsp;Values for events are estimated based on data from previous patches; may not be accurate <br>
-            <img class="star" src="static/images/star.png"> &emsp;Does not factor in any value from fates (like monthly shop), aka primos ONLY (with exception of bp) <br>
-            <img class="star" src="static/images/star.png"> &emsp;Welkin 300 genesis crystals not included (but can be manually inputted into the genesis crystal param?) <br>
-            <img class="star" src="static/images/star.png"> &emsp;Estimate button is to input average values for all fields (f2p assumed), and you may edit them as needed. <br>
-
-            <img id="paimon" src="static/images/paimon.png">
-
+            <img class="star" src="static/images/star.png"> &emsp;Date selection starts from patch 2.0.  <br>
+            <img class="star" src="static/images/star.png"> &emsp;The <span>estimate button</span> autofills fields with average values (F2P assumed). You may edit them as needed. <br>
+            <img class="star" src="static/images/star.png"> &emsp;Calculations do not factor Paimon's Bargains shop fates. <br>
+            <img class="star" src="static/images/star.png"> &emsp;If the end date is the start of a new abyss cycle, primogems obtainable during that cycle will be included. <br>
+            <img class="star" src="static/images/star.png"> &emsp;Events are calculated per patch. Only enter values for a single patch. <br>
+            <img class="star" src="static/images/star.png"> &emsp;Event values are estimated based on data from previous patches. May not be accurate. <br>
+            <img class="star" src="static/images/star.png"> &emsp;Welkin 300 Genesis Crystals not included (but can be input manually into the Genesis Crystals field). <br>
+            <img class="star" src="static/images/star.png"> &emsp;You can access this window again through the Adventurer Handbook X tab.<br>
+            <!--<img id="paimon" src="static/images/paimon.png">-->
+            <footer>All assets used belong to miHoYo Co., Ltd.</footer>
             <div id="popupbt" onclick="popUp('hide')">
-              <div id="oCircle"><div id="iCircle"></div></div>
-              Confirm </div>
-            
+            <div id="oCircle"><div id="iCircle"></div></div>Confirm </div>
           </div>
-
         </div>
       </div>
+      <!-- PopUp End -->
 
       <form action="/results" method="POST" id="param_form">
         
@@ -98,6 +94,9 @@
           </div>
           
           <div class="col-lg">
+
+            <div id="info" onclick="popUp('show')"> </div>
+
             <!-- Parameters Input Start -->
             <div id="tabs-1">
 
