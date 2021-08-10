@@ -1,11 +1,15 @@
+window.onload = function () {
+    if (!sessionStorage.getItem('popUp')){
+        setTimeout(function () {
+            popUp('show');
+        }, 10);
+    }
+    sessionStorage.setItem('popUp', 'true');
+}
+
 function popUp(hideOrshow) {
     if (hideOrshow == 'hide') document.getElementById('popwrap').style.display = "none";
     else document.getElementById('popwrap').removeAttribute('style');
-}
-window.onload = function () {
-    setTimeout(function () {
-        popUp('show');
-    }, 10);
 }
 
 function GetDays() {
