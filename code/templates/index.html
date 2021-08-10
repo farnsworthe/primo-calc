@@ -103,16 +103,16 @@
 
                 <div class="parameters"> 
                   <div class="abyss"> <h2 id="param">ABYSS RESET</h2> </div>
-                  How many stars do you have per floor per reset on average? <br>Floor 9: <input type="number" id="abyss9" name="abyss9"> 
-                  Floor 10: <input type="number" id="abyss10" name="abyss10"> Floor 11: <input type="number" id="abyss11" name="abyss11"> Floor 12: 
-                  <input type="number" id="abyss12" name="abyss12">
+                  How many stars do you have per floor per reset on average? <br>Floor 9: <input type="number" id="abyss9" name="abyss9" min="0" max="9"> 
+                  Floor 10: <input type="number" id="abyss10" name="abyss10" min="0" max="9"> Floor 11: <input type="number" id="abyss11" name="abyss11" min="0" max="9"> Floor 12: 
+                  <input type="number" id="abyss12" name="abyss12" min="0" max="9">
                 </div>
 
                 <div class="parameters"> 
-                  <div class="events"><h2 id= "param">EVENTS</h2></div>
+                  <div class="events"><h2 id= "param">EVENTS (per patch)</h2></div>
                   Include main events? <input type="checkbox" id="main_event" name="main_event">
-                  How many side events? <input type="number" id="side_event" name="side_event">
-                  How many new quests? <input type="number" id="new_quests" name="new_quests">
+                  How many side events? <input type="number" id="side_event" name="side_event" min="0"> 
+                  How many new quests? <input type="number" id="new_quests" name="new_quests" min="0">
                 </div>
 
                 <div class="parameters"> 
@@ -126,7 +126,7 @@
                   <div class="paid"> <h2 id ="param">PAID PRIMOGEMS</h2> </div>
                   Welkin? <input type="checkbox" name="welkin" id="welkin">
                   Battle Pass? <input type="checkbox" name="bp" id="bp">
-                  Genesis crystals? <input type="number" name="paid" id="paid">
+                  Genesis crystals? <input type="number" name="paid" id="paid" min="0">
                 </div>
 
             </div>
