@@ -49,21 +49,3 @@ function fillBlanks() {
     document.getElementById("maint_live").checked = true;
     document.getElementById("test_runs").checked = true;
 }
-
-/*
-function hideIntro() {
-    var x = document.getElementById('intro');
-    if (x.style.display = "block") {
-        x.style.display = "none";
-    }
-}
-
-function displayTab(element) {
-    var tabContents = document.getElementsByClassName('tabContent');
-    for (var i = 0; i < tabContents.length; ++i) {
-        tabContents[i].style.display = 'none';
-    }
-    var tabContentIdToShow = element.id.replace(/(\d)/g, '-$1');
-    document.getElementById(tabContentIdToShow).style.display = 'block';
-}
-*/
