@@ -48,7 +48,7 @@
         </div>
       </div>
 
-      <form action="/results" method="POST" id="param_form">
+      <form action="/results" method="POST" id="param_form" onsubmit="return validate()">
         
         <!-- Outermost Row Start -->
         <div class="row">
@@ -81,14 +81,14 @@
             <h1> PRIMOGEM CALCULATOR </h1>
             <br>
             <label for="start">Start Date:</label>
-            <input type="date" id="start" name="start" onchange="cal()" min="2021-07-20" max="2024-01-30">
+            <input type="date" id="start" name="start" onchange="cal()" min="2021-07-20" max="2024-01-30" required>
             <br><br>
             <label for="end">End Date:</label>
-            <input type="date" id="end" name="end" onchange="cal()" min="2021-07-20" max="2024-01-30">
+            <input type="date" id="end" name="end" onchange="cal()" min="2021-07-20" max="2024-01-30" required>
 
             <div class="deco">  <!-- The circle w/ the date range -->
               <div class ="days">
-                  <input id="numdays2" name="numdays"/>   <!-- The date range -->
+                  <input id="numdays2" name="numdays" value="0"/>   <!-- The date range -->
               </div>
             </div>
 

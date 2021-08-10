@@ -30,15 +30,6 @@ def results():
         abyss2 = startdate_object
 
         # finding the next two dates in abyss
-        '''if int(startdate_object.day) > 1:
-            abyss1 = abyss1 + relativedelta(months=+1)
-            abyss1.day = 1
-        if int(startdate_object.day) > 16:
-            abyss2 = abyss2 + relativedelta(months=+1)
-            abyss2.day = 16
-        else:
-            abyss2.day = 16'''
-
         # if start day is 1
         if int(startdate_object.day) == 1:
             abyss2 = datetime.datetime(startdate_object.year, startdate_object.month, 16)
@@ -53,11 +44,13 @@ def results():
             abyss1 = datetime.datetime(startdate_object.year, startdate_object.month, 1)
             abyss1 += relativedelta(months=+1) # add a month bc 1st of next month
             abyss2 = datetime.datetime(startdate_object.year, startdate_object.month, 16)
+            abyssCycles += 1
         if int(startdate_object.day) > 16 and int(startdate_object.day) <= 31:
             abyss1 = datetime.datetime(startdate_object.year, startdate_object.month, 1)
             abyss1 += relativedelta(months=+1) # add a month bc 1st of next month
             abyss2 = datetime.datetime(startdate_object.year, startdate_object.month, 16)
             abyss2 += relativedelta(months=+1) # add a month bc 16th of next month
+            abyssCycles += 1
 
         while abyss1 <= enddate_object:
             abyss1 += relativedelta(months=+1)
@@ -67,8 +60,8 @@ def results():
             abyssCycles += 1
         
         # if the duration is less than a full cycle
-        if abyssCycles == 0:
-            abyssCycles = 1
+        #if abyssCycles == 0:
+            #abyssCycles = 1
 
         print(abyss1)
         print(abyss2)

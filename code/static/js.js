@@ -17,7 +17,18 @@ function GetDays() {
 function cal() {
     if(document.getElementById("end")) {
     document.getElementById("numdays2").value=GetDays();
-    }  
+    }
+    updateMin();  
+}
+
+function updateMin(){
+    document.getElementById("end").min = document.getElementById("start").value;
+}
+
+function vadliate(){
+    var days = document.getElementById("numdays2").value;
+    if (days < 1)
+        return false;
 }
 
 function fillBlanks() {
