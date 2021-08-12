@@ -16,7 +16,6 @@ def results():
         mnEvtCheck, mtlvCheck, dlyCheck, trCheck, wlknCheck, bpCheck = False, False, False, False, False, False
 
         # retrieving form data
-        patches = 0
         abyssCycles = 0
         patchCount = 1
 
@@ -63,13 +62,10 @@ def results():
         #if abyssCycles == 0:
             #abyssCycles = 1
 
-        print(abyss1)
-        print(abyss2)
-        print(abyssCycles)
-
 
         list = []
 
+        list.append(datetime.datetime(int(2021), int(7), int(20)))
         list.append(datetime.datetime(int(2021), int(8), int(31)))
         list.append(datetime.datetime(int(2021), int(10), int(12)))
         list.append(datetime.datetime(int(2021), int(11), int(23)))
@@ -92,18 +88,28 @@ def results():
         list.append(datetime.datetime(2023, 12, 19))
 
         list_length = len(list)
+        firstpatch = list[0]
+        lastpatch = startdate_object
+        j = 0
+
+        while firstpatch < startdate_object:
+            if list[j] > enddate_object:
+                break
+            firstpatch = list[j]
+            j+=1
+
+
 
         
         for i in range(list_length):
-            if startdate_object <= list[i] <= enddate_object:
-                patchCount += 1
+            if startdate_object < list[i] < enddate_object:
+               patchCount += 1
             else:
-                break
+                continue
 
-        
-
-
-        #print(patchCount)
+        print("patches")
+        print(patchCount)
+        print(firstpatch)
     
 
         ##########
