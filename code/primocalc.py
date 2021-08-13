@@ -98,6 +98,20 @@ def results():
             firstpatch = list[j]
             j+=1
 
+        j = 0
+        while lastpatch < enddate_object:
+            if list[j] > enddate_object:
+                break
+            lastpatch = list[j]
+            j+=1
+
+        difference = firstpatch - startdate_object
+        difference2 = enddate_object - lastpatch
+        print('differences')
+        print(difference)
+        print(difference2)
+        print('-')
+
 
 
         
@@ -110,6 +124,7 @@ def results():
         print("patches")
         print(patchCount)
         print(firstpatch)
+        print(lastpatch)
     
 
         ##########
