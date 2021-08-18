@@ -108,10 +108,10 @@ def results():
         difference = firstpatch - startdate_object
         difference2 = enddate_object - lastpatch
         print('differences')
+        print(type(difference))
         print(difference)
         print(difference2)
         print('-')
-
 
 
         
@@ -120,6 +120,11 @@ def results():
                patchCount += 1
             else:
                 continue
+
+        patchCount -= 2
+
+        if patchCount == -1:
+            patchCount = 0
 
         print("patches")
         print(patchCount)
@@ -186,6 +191,7 @@ def results():
         bpP = 0
         bpFates = 0
 
+
         # calculations
         abyss9P = (abyss9//3) * 50 
         abyss10P = (abyss10//3) * 50 
@@ -196,21 +202,72 @@ def results():
         if dlyCheck:
             dailiesP = days * 60
         if mtlvCheck:
-            mainliveP = patchCount * 600
+            if patchCount == -1:
+                mainliveP = 0 * 600
+            else:
+                mainliveP = patchCount * 600
         if trCheck:
-            testrunP = patchCount * 40
+            if patchCount == -1:
+                testrunP = 0 * 40
+            else:
+                testrunP = patchCount * 40
         if wlknCheck:
             welkinP = days * 90
         if bpCheck:
-            bpP = patchCount * 680
-            bpFates = patchCount * 4
+            if patchCount == -1:
+                bpP = 0
+                bpFates = 0
+            else:
+                bpP = patchCount * 680
+                bpFates = patchCount * 4
         if mnEvtCheck:
-            mnEvtP = patchCount * 872
+            if patchCount == -1:
+                mEvtP = 0
+            else:
+                mnEvtP = patchCount * 872
 
-        sideEvtP = patchCount * sideEvt * 413
-        newQuestsP = patchCount * newQuests * 60
+        if patchCount == -1:
+            sideEvtP = 0
+            newQuestsP = 0
+            
+        else:
+            sideEvtP = patchCount * sideEvt * 413
+            newQuestsP = patchCount * newQuests * 60
+    
 
-        # adding to the total
+        if difference > datetime.timedelta(hours=504):
+            mnEvtP += 872
+            sideEvtP += (413 * sideEvt)
+            mainliveP += 300
+            testrunP += 40
+            newQuestsP += 120
+            newQuestsP += 60
+            
+        else:
+            sideEvtP += 413
+            testrunP += 20
+            mainliveP += 300
+
+        if patchCount == -1:
+            print('done')
+
+        elif patchCount == 0:
+            print('done')
+
+        else:
+            if difference2 > datetime.timedelta(hours=504):
+                mnEvtP += 872
+                testrunP += 20
+                newQuestsP += 60
+
+            else:
+                mnEvtP += 872
+                sideEvtP += (413 * sideEvt)
+                mainliveP += 300
+                testrunP += 40
+                newQuestsP += 120
+
+    # adding to the total
         total = abyssP + mnEvtP + sideEvtP + newQuestsP + dailiesP + mainliveP + testrunP + welkinP + bpP + (bpFates * 160) + paid
         pulls = total//160
 
@@ -218,6 +275,7 @@ def results():
         eventsP = mnEvtP + sideEvtP + newQuestsP 
         miscP = dailiesP + mainliveP + testrunP 
         paidP = welkinP + bpP + (bpFates * 160) + paid
+
 
     return render_template("results.html", 
         days=days,
